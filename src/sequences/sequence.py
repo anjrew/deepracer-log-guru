@@ -6,6 +6,7 @@
 # Copyright (c) 2021 dmh23
 #
 import copy
+from typing import List
 
 from src.event.event_meta import Event
 from src.utils.geometry import get_bearing_between_points, get_distance_between_points, get_angle_in_proper_range, get_point_at_bearing
@@ -30,7 +31,7 @@ class Sequence:
         self._is_invalid = True
         self._add_on = None
 
-    def set_from_events(self, events: list[Event]):
+    def set_from_events(self, events: List[Event]):
         assert len(events) >= MINIMUM_USEFUL_SEQUENCE_LENGTH >= 2
         first_event = events[0]
         last_event = events[-1]

@@ -2,6 +2,7 @@
 # ************************
 
 from abc import ABC
+from typing import List
 
 from graphics.canvas import Canvas
 from PyQt6.QtWidgets import QAbstractGraphicsShapeItem
@@ -94,7 +95,7 @@ class TrackAnalysisCanvas(Canvas):
         for f in self._fixed_shapes:
             f.paint(painter, scale)
 
-    def _get_scene_items(self) -> list[QAbstractGraphicsShapeItem]:
+    def _get_scene_items(self) -> List[QAbstractGraphicsShapeItem]:
         # rect = QGraphicsRectItem(0, 0, self._width / 20, self._height / 20)
         # rect.setPos(self._width / 10, self._height / 10)
         # brush = QBrush(Qt.GlobalColor.red)

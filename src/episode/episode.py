@@ -742,7 +742,8 @@ def are_close_waypoint_ids(id1, id2, track :Track):
         return False
 
 
-def extract_all_sequences(episodes: list[Episode], min_sequence_length: int):
+def extract_all_sequences(episodes: typing.List[Episode], min_sequence_length: int):
+    print("AHHHH",episodes)
     result = Sequences()
     if episodes is not None:
         for e in episodes:

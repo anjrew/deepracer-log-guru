@@ -7,7 +7,7 @@
 #
 
 import tkinter as tk
-from typing import Callable
+from typing import Callable, List
 
 import src.utils.abstract_method as abstract_method
 
@@ -88,7 +88,7 @@ class Control:
         self._row_right += 1
         self._row += 1
 
-    def add_dropdown(self, title: str, tk_var: tk.StringVar, values: list[str], callback: Callable):
+    def add_dropdown(self, title: str, tk_var: tk.StringVar, values: List[str], callback: Callable):
         if title:
             tk.Label(self._label_frame, text=title).grid(column=0, row=self._row, pady=0, padx=5, sticky=tk.W)
 

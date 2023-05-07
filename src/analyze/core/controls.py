@@ -9,6 +9,7 @@
 import math
 import tkinter as tk
 from enum import IntEnum
+from typing import List
 
 from src.analyze.core.control import Control
 from src.configuration.config_manager import ConfigManager
@@ -1007,7 +1008,7 @@ class CurveHighlightControl(Control):
 class NumericButtonsControl(Control):
 
     def __init__(self, guru_parent_redraw, control_frame: tk.Frame,
-                 title: str, unit: str, values: list[int], default: int):
+                 title: str, unit: str, values: List[int], default: int):
         super().__init__(guru_parent_redraw, control_frame, title)
 
         assert default in values

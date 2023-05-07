@@ -2,6 +2,7 @@
 # ************************
 
 from abc import abstractmethod
+from typing import List
 
 from PyQt6.QtWidgets import QGraphicsScene, QGraphicsView, QGraphicsRectItem, QGraphicsPixmapItem, \
     QAbstractGraphicsShapeItem
@@ -46,5 +47,5 @@ class Canvas(QGraphicsView):
         pass
 
     @abstractmethod
-    def _get_scene_items(self) -> list[QAbstractGraphicsShapeItem]:
+    def _get_scene_items(self) -> List[QAbstractGraphicsShapeItem]:
         pass

@@ -6,13 +6,14 @@
 # Copyright (c) 2021 dmh23
 #
 
+from typing import List
 from src.episode.episode import Episode
 import numpy as np
 
 
 class RewardPercentiles:
 
-    def __init__(self, episodes: list[Episode], calculate_new_reward: bool):
+    def __init__(self, episodes: List[Episode], calculate_new_reward: bool):
         percents = np.arange(100)
 
         all_rewards = episodes[0].rewards

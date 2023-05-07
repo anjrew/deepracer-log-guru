@@ -1,4 +1,5 @@
 from enum import Enum
+from typing import List
 
 
 class Lane(Enum):
@@ -15,7 +16,7 @@ class FixedObjectLocation:
 
 class FixedObjectLocations:
     def __init__(self):
-        self._locations: list[FixedObjectLocation] = []
+        self._locations: List[FixedObjectLocation] = []
 
     def add(self, location: FixedObjectLocation):
         self._locations.append(location)

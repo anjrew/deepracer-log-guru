@@ -8,7 +8,7 @@
 
 import re
 from enum import Enum, auto
-from typing import Self
+from typing import List, Self
 
 
 class MetaFieldValidationIssue(Exception):
@@ -183,13 +183,13 @@ class MetaField:
 
 class MetaFields:
     @staticmethod
-    def create_json(fields: list[MetaField]):
+    def create_json(fields: List[MetaField]):
         output_json = {}
         for f in fields:
             f.add_to_json(output_json)
         return output_json
 
     @staticmethod
-    def parse_json(fields: list[MetaField], input_json: dict):
+    def parse_json(fields: List[MetaField], input_json: dict):
         for f in fields:
             f.get_from_json(input_json)
